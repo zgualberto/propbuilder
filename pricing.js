@@ -1935,43 +1935,43 @@ function iqApproveSmall() {
       value: PlusAndConnect.IQapprove
     },
     {
-      name: "#iqApproveWeekly",
+      name: "#iqApprove_Weekly",
       value: PlusAndConnect.IQapprove
     },
     {
-      name: "#iqApproveurchaseMethod",
+      name: "#iqApprovePurchaseMethod",
       value: PlusAndConnect.purchaseMethod.upfront
     },
     {
-      name: "#iqApproveWeeklyPurchaseMethod",
+      name: "#iqApprove_WeeklyPurchaseMethod",
       value: PlusAndConnect.purchaseMethod.weekly
     },
     {
-      name: "#iqApproveWeeklySubs",
+      name: "#iqApprove_WeeklySubs",
       value: PlusAndConnect.weeklyPrice.small
     },
     {
-      name: "#iqApproveeploymentCost",
+      name: "#iqApproveDeploymentCost",
       value: PlusAndConnect.price.small
     },
     {
-      name: "#iqApprovennualService",
+      name: "#iqApproveAnnualService",
       value: PlusAndConnect.annualPrice.small
     },
     {
-      name: "#iqApproveaysSupport",
+      name: "#iqApproveDaysSupport",
       value: PlusAndConnect.implementationTime
     },
     {
-      name: "#iqApprovemplemetationCost",
+      name: "#iqApproveimplemetationCost",
       value: PlusAndConnect.implementationCost
     },
     {
-      name: "#iqApproveWeeklyDaysSupport",
+      name: "#iqApprove_WeeklyDaysSupport",
       value: PlusAndConnect.implementationTime
     },
     {
-      name: "#iqApproveWeeklyImplementationCost",
+      name: "#iqApprove_WeeklyImplementationCost",
       value: PlusAndConnect.implementationCost
     }
   ]);
@@ -1990,43 +1990,43 @@ function iqApproveMedium() {
       value: PlusAndConnect.IQapprove
     },
     {
-      name: "#iqApproveWeekly",
+      name: "#iqApprove_Weekly",
       value: PlusAndConnect.IQapprove
     },
     {
-      name: "#iqApproveurchaseMethod",
+      name: "#iqApprovePurchaseMethod",
       value: PlusAndConnect.purchaseMethod.upfront
     },
     {
-      name: "#iqApproveWeeklyPurchaseMethod",
+      name: "#iqApprove_WeeklyPurchaseMethod",
       value: PlusAndConnect.purchaseMethod.weekly
     },
     {
-      name: "#iqApproveWeeklySubs",
+      name: "#iqApprove_WeeklySubs",
       value: PlusAndConnect.weeklyPrice.medium
     },
     {
-      name: "#iqApproveeploymentCost",
+      name: "#iqApproveDeploymentCost",
       value: PlusAndConnect.price.medium
     },
     {
-      name: "#iqApprovennualService",
+      name: "#iqApproveAnnualService",
       value: PlusAndConnect.annualPrice.medium
     },
     {
-      name: "#iqApproveaysSupport",
+      name: "#iqApproveDaysSupport",
       value: PlusAndConnect.implementationTime
     },
     {
-      name: "#iqApprovemplemetationCost",
+      name: "#iqApproveimplemetationCost",
       value: PlusAndConnect.implementationCost
     },
     {
-      name: "#iqApproveWeeklyDaysSupport",
+      name: "#iqApprove_WeeklyDaysSupport",
       value: PlusAndConnect.implementationTime
     },
     {
-      name: "#iqApproveWeeklyImplementationCost",
+      name: "#iqApprove_WeeklyImplementationCost",
       value: PlusAndConnect.implementationCost
     }
   ]);
@@ -2045,43 +2045,43 @@ function iqApproveLarge() {
       value: PlusAndConnect.IQapprove
     },
     {
-      name: "#iqApproveWeekly",
+      name: "#iqApprove_Weekly",
       value: PlusAndConnect.IQapprove
     },
     {
-      name: "#iqApproveurchaseMethod",
+      name: "#iqApprovePurchaseMethod",
       value: PlusAndConnect.purchaseMethod.upfront
     },
     {
-      name: "#iqApproveWeeklyPurchaseMethod",
+      name: "#iqApprove_WeeklyPurchaseMethod",
       value: PlusAndConnect.purchaseMethod.weekly
     },
     {
-      name: "#iqApproveWeeklySubs",
+      name: "#iqApprove_WeeklySubs",
       value: PlusAndConnect.weeklyPrice.large
     },
     {
-      name: "#iqApproveeploymentCost",
+      name: "#iqApproveDeploymentCost",
       value: PlusAndConnect.price.large
     },
     {
-      name: "#iqApprovennualService",
+      name: "#iqApproveAnnualService",
       value: PlusAndConnect.annualPrice.large
     },
     {
-      name: "#iqApproveaysSupport",
+      name: "#iqApproveDaysSupport",
       value: PlusAndConnect.implementationTime
     },
     {
-      name: "#iqApprovemplemetationCost",
+      name: "#iqApproveimplemetationCost",
       value: PlusAndConnect.implementationCost
     },
     {
-      name: "#iqApproveWeeklyDaysSupport",
+      name: "#iqApprove_WeeklyDaysSupport",
       value: PlusAndConnect.implementationTime
     },
     {
-      name: "#iqApproveWeeklyImplementationCost",
+      name: "#iqApprove_WeeklyImplementationCost",
       value: PlusAndConnect.implementationCost
     }
   ]);
@@ -2100,43 +2100,43 @@ function iqApproveExtraLarge() {
       value: PlusAndConnect.IQapprove
     },
     {
-      name: "#iqApproveWeekly",
+      name: "#iqApprove_Weekly",
       value: PlusAndConnect.IQapprove
     },
     {
-      name: "#iqApproveurchaseMethod",
+      name: "#iqApprovePurchaseMethod",
       value: PlusAndConnect.purchaseMethod.upfront
     },
     {
-      name: "#iqApproveWeeklyPurchaseMethod",
+      name: "#iqApprove_WeeklyPurchaseMethod",
       value: PlusAndConnect.purchaseMethod.weekly
     },
     {
-      name: "#iqApproveWeeklySubs",
+      name: "#iqApprove_WeeklySubs",
       value: PlusAndConnect.weeklyPrice.extraLarge
     },
     {
-      name: "#iqApproveeploymentCost",
+      name: "#iqApproveDeploymentCost",
       value: PlusAndConnect.price.extraLarge
     },
     {
-      name: "#iqApprovennualService",
+      name: "#iqApproveAnnualService",
       value: PlusAndConnect.annualPrice.extraLarge
     },
     {
-      name: "#iqApproveaysSupport",
+      name: "#iqApproveDaysSupport",
       value: PlusAndConnect.implementationTime
     },
     {
-      name: "#iqApprovemplemetationCost",
+      name: "#iqApproveimplemetationCost",
       value: PlusAndConnect.implementationCost
     },
     {
-      name: "#iqApproveWeeklyDaysSupport",
+      name: "#iqApprove_WeeklyDaysSupport",
       value: PlusAndConnect.implementationTime
     },
     {
-      name: "#iqApproveWeeklyImplementationCost",
+      name: "#iqApprove_WeeklyImplementationCost",
       value: PlusAndConnect.implementationCost
     }
   ]);
