@@ -230,7 +230,7 @@ $(document).ready(function() {
     const iqPunchOut = $("#iqPunchOutSelector")
       .children("option:selected")
       .val();
-    const iqSmartSite = $('#iqSmartSiteSelector')
+    const iqSmartSite = $("#iqSmartSiteSelector")
       .children("option:selected")
       .val();
 
@@ -354,23 +354,293 @@ $(document).ready(function() {
       IQLinkSelectorExtraLarge();
     }
 
-    if(selectedModule == "Small" && iqPunchOut == 'Yes') {
+    if (selectedModule == "Small" && iqPunchOut == "Yes") {
       IQPunchOutSmall();
     }
-    if(selectedModule == "Medium" && iqPunchOut == 'Yes') {
+    if (selectedModule == "Medium" && iqPunchOut == "Yes") {
       IQPunchOutMedium();
     }
-    if(selectedModule == "Large" && iqPunchOut == 'Yes') {
+    if (selectedModule == "Large" && iqPunchOut == "Yes") {
       IQPunchOutLarge();
     }
-    if(selectedModule == "Extra Large" && iqPunchOut == 'Yes') {
+    if (selectedModule == "Extra Large" && iqPunchOut == "Yes") {
       IQPunchOutExtraLarge();
     }
-    if(selectedModule =="Small" && iqSmartSite =='Yes') {
+    if (selectedModule == "Small" && iqSmartSite == "Yes") {
       IQSmartSiteSmall();
       console.log("halala");
     }
 
+    $("#iqTotalDeploymentCost").text(
+      parseInt(
+        $("#IQChiliDeploymentCost p").text() !== "undefined"
+          ? $("#IQChiliDeploymentCost p").text()
+          : 0
+      ) +
+        parseInt(
+          $("#IQEnfocusDeploymentCost p").text() !== "undefined"
+            ? $("#IQEnfocusDeploymentCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQEskoDeploymentCost p").text() !== "undefined"
+            ? $("#IQEskoDeploymentCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflowDeploymentCost p").text() !== "undefined"
+            ? $("#IQFreeflowDeploymentCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQBoxDeploymentCost p").text() !== "undefined"
+            ? $("#IQBoxDeploymentCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQIntegrateDeploymentCost p").text() !== "undefined"
+            ? $("#IQIntegrateDeploymentCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQLinkDeploymentCost p").text() !== "undefined"
+            ? $("#IQLinkDeploymentCost p").text()
+            : 0
+        )
+    );
+
+    $("#iqTotalAnnualService").text(
+      parseInt(
+        $("#IQChiliAnnualService p").text() !== "undefined"
+          ? $("#IQChiliAnnualService p").text()
+          : 0
+      ) +
+        parseInt(
+          $("#IQEnfocusAnnualService p").text() !== "undefined"
+            ? $("#IQEnfocusAnnualService p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQEskoAnnualService p").text() !== "undefined"
+            ? $("#IQEskoAnnualService p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflowAnnualService p").text() !== "undefined"
+            ? $("#IQFreeflowAnnualService p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQBoxAnnualService p").text() !== "undefined"
+            ? $("#IQBoxAnnualService p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQIntegrateAnnualService p").text() !== "undefined"
+            ? $("#IQIntegrateAnnualService p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQLinkAnnualService p").text() !== "undefined"
+            ? $("#IQLinkAnnualService p").text()
+            : 0
+        )
+    );
+
+    $("#iqTotalimplemetationCost").text(
+      parseInt(
+        $("#IQChiliimplemetationCost p").text() !== "undefined"
+          ? $("#IQChiliimplemetationCost p").text()
+          : 00
+      ) +
+        parseInt(
+          $("#IQEnfocusimplemetationCost p").text() !== "undefined"
+            ? $("#IQEnfocusimplemetationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQEskoimplemetationCost p").text() !== "undefined"
+            ? $("#IQEskoimplemetationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflowimplemetationCost p").text() !== "undefined"
+            ? $("#IQFreeflowimplemetationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQBoximplemetationCost p").text() !== "undefined"
+            ? $("#IQBoximplemetationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQIntegrateimplemetationCost p").text() !== "undefined"
+            ? $("#IQIntegrateimplemetationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQLinkimplemetationCost p").text() !== "undefined"
+            ? $("#IQLinkimplemetationCost p").text()
+            : 0
+        )
+    );
+
+    $("#iqTotalDaysSupport").text(
+      parseInt(
+        $("#IQChiliDaysSupport p").text() !== "undefined"
+          ? $("#IQChiliDaysSupport p").text()
+          : 0
+      ) +
+        parseInt(
+          $("#IQEnfocusDaysSupport p").text() !== "undefined"
+            ? $("#IQEnfocusDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQEskoDaysSupport p").text() !== "undefined"
+            ? $("#IQEskoDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflowDaysSupport p").text() !== "undefined"
+            ? $("#IQFreeflowDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQBoxDaysSupport p").text() !== "undefined"
+            ? $("#IQBoxDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQIntegrateDaysSupport p").text() !== "undefined"
+            ? $("#IQIntegrateDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQLinkDaysSupport p").text() !== "undefined"
+            ? $("#IQLinkDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#installationCoreModuleDaysincluded").text() !== "undefined"
+            ? $("#installationCoreModuleDaysincluded").text()
+            : 0
+        )
+    );
+
+    $("#iqTotal_WeeklySubs").text(
+      parseInt(
+        $("#IQChili_WeeklySubs p").text() !== "undefined"
+          ? $("#IQChili_WeeklySubs p").text()
+          : 0
+      ) +
+        parseInt(
+          $("#IQEnfocus_WeeklySubs p").text() !== "undefined"
+            ? $("#IQEnfocus_WeeklySubs p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflow_WeeklySubs p").text() !== "undefined"
+            ? $("#IQFreeflow_WeeklySubs p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflow_WeeklySubs p").text() !== "undefined"
+            ? $("#IQFreeflow_WeeklySubs p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQBox_WeeklySubs p").text() !== "undefined"
+            ? $("#IQBox_WeeklySubs p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQIntegrate_WeeklySubs p").text() !== "undefined"
+            ? $("#IQIntegrate_WeeklySubs p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQLink_WeeklySubs p").text() !== "undefined"
+            ? $("#IQLink_WeeklySubs p").text()
+            : 0
+        )
+    );
+
+    $("#iqTotal_WeeklyImplementationCost").text(
+      parseInt(
+        $("#IQChili_WeeklyImplementationCost p").text() !== "undefined"
+          ? $("#IQChili_WeeklyImplementationCost p").text()
+          : 0
+      ) +
+        parseInt(
+          $("#IQEnfocus_WeeklyImplementationCost p").text() !== "undefined"
+            ? $("#IQEnfocus_WeeklyImplementationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflow_WeeklyImplementationCost p").text() !== "undefined"
+            ? $("#IQFreeflow_WeeklyImplementationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflow_WeeklyImplementationCost p").text() !== "undefined"
+            ? $("#IQFreeflow_WeeklyImplementationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQBox_WeeklyImplementationCost p").text() !== "undefined"
+            ? $("#IQBox_WeeklyImplementationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQIntegrate_WeeklyImplementationCost p").text() !== "undefined"
+            ? $("#IQIntegrate_WeeklyImplementationCost p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQLink_WeeklyImplementationCost p").text() !== "undefined"
+            ? $("#IQLink_WeeklyImplementationCost p").text()
+            : 0
+        )
+    );
+
+    $("#iqTotal_WeeklyDaysSupport").text(
+      parseInt(
+        $("#IQChili_WeeklyDaysSupport p").text() !== "undefined"
+          ? $("#IQChili_WeeklyDaysSupport p").text()
+          : 0
+      ) +
+        parseInt(
+          $("#IQEnfocus_WeeklyDaysSupport p").text() !== "undefined"
+            ? $("#IQEnfocus_WeeklyDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflow_WeeklyDaysSupport p").text() !== "undefined"
+            ? $("#IQFreeflow_WeeklyDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQFreeflow_WeeklyDaysSupport p").text() !== "undefined"
+            ? $("#IQFreeflow_WeeklyDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQBox_WeeklyDaysSupport p").text() !== "undefined"
+            ? $("#IQBox_WeeklyDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQIntegrate_WeeklyDaysSupport p").text() !== "undefined"
+            ? $("#IQIntegrate_WeeklyDaysSupport p").text()
+            : 0
+        ) +
+        parseInt(
+          $("#IQLink_WeeklyDaysSupport p").text() !== "undefined"
+            ? $("#IQLink_WeeklyDaysSupport p").text()
+            : 0
+        )
+    );
   });
 });
 
@@ -408,281 +678,281 @@ function appDataAd(data) {
   });
 }
 
-function IQSmartSiteSmall(){
-  console.log('smartsite');
+function IQSmartSiteSmall() {
+  console.log("smartsite");
   $("#rowIQSmartSite")
-  .children()
-  .empty();
-$("#rowIQSmartSite_Weekly")
-  .children()
-  .empty();
-appDataAd([
-  {
-    name: "#IQSmartSite",
-    value: PlusAndConnect.IQSmartSite
-  },
-  {
-    name: "#IQSmartSite_Weekly",
-    value: PlusAndConnect.IQSmartSite
-  },
-  {
-    name: "#IQSmartSitePurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.upfront
-  },
-  {
-    name: "#IQSmartSite_WeeklyPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.weekly
-  },
-  {
-    name: "#IQSmartSite_WeeklySubs",
-    value: PlusAndConnect.weeklyPrice.small
-  },
-  {
-    name: "#IQSmartSiteDeploymentCost",
-    value: PlusAndConnect.price.small
-  },
-  {
-    name: "#IQSmartSiteAnnualService",
-    value: PlusAndConnect.annualPrice.small
-  },
-  {
-    name: "#IQSmartSiteDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQSmartSiteimplemetationCost",
-    value: PlusAndConnect.implementationCost
-  },
-  {
-    name: "#IQSmartSite_WeeklyDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQSmartSite_WeeklyImplementationCost",
-    value: PlusAndConnect.implementationCost
-  }
-]);
+    .children()
+    .empty();
+  $("#rowIQSmartSite_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQSmartSite",
+      value: PlusAndConnect.IQSmartSite
+    },
+    {
+      name: "#IQSmartSite_Weekly",
+      value: PlusAndConnect.IQSmartSite
+    },
+    {
+      name: "#IQSmartSitePurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.upfront
+    },
+    {
+      name: "#IQSmartSite_WeeklyPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.weekly
+    },
+    {
+      name: "#IQSmartSite_WeeklySubs",
+      value: PlusAndConnect.weeklyPrice.small
+    },
+    {
+      name: "#IQSmartSiteDeploymentCost",
+      value: PlusAndConnect.price.small
+    },
+    {
+      name: "#IQSmartSiteAnnualService",
+      value: PlusAndConnect.annualPrice.small
+    },
+    {
+      name: "#IQSmartSiteDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQSmartSiteimplemetationCost",
+      value: PlusAndConnect.implementationCost
+    },
+    {
+      name: "#IQSmartSite_WeeklyDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQSmartSite_WeeklyImplementationCost",
+      value: PlusAndConnect.implementationCost
+    }
+  ]);
 }
 
-function IQPunchOutSmall(){
-  console.log('small');
+function IQPunchOutSmall() {
+  console.log("small");
   $("#rowIQPunchOut")
-  .children()
-  .empty();
-$("#rowIQPunchOut_Weekly")
-  .children()
-  .empty();
-appDataAd([
-  {
-    name: "#IQPunchOut",
-    value: PlusAndConnect.IQPunchOut
-  },
-  {
-    name: "#IQPunchOut_Weekly",
-    value: PlusAndConnect.IQPunchOut
-  },
-  {
-    name: "#IQPunchOutPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.upfront
-  },
-  {
-    name: "#IQPunchOut_WeeklyPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.weekly
-  },
-  {
-    name: "#IQPunchOut_WeeklySubs",
-    value: PlusAndConnect.weeklyPrice.small
-  },
-  {
-    name: "#IQPunchOutDeploymentCost",
-    value: PlusAndConnect.price.small
-  },
-  {
-    name: "#IQPunchOutAnnualService",
-    value: PlusAndConnect.annualPrice.small
-  },
-  {
-    name: "#IQPunchOutDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQPunchOutimplemetationCost",
-    value: PlusAndConnect.implementationCost
-  },
-  {
-    name: "#IQPunchOut_WeeklyDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQPunchOut_WeeklyImplementationCost",
-    value: PlusAndConnect.implementationCost
-  }
-]);
+    .children()
+    .empty();
+  $("#rowIQPunchOut_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQPunchOut",
+      value: PlusAndConnect.IQPunchOut
+    },
+    {
+      name: "#IQPunchOut_Weekly",
+      value: PlusAndConnect.IQPunchOut
+    },
+    {
+      name: "#IQPunchOutPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.upfront
+    },
+    {
+      name: "#IQPunchOut_WeeklyPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.weekly
+    },
+    {
+      name: "#IQPunchOut_WeeklySubs",
+      value: PlusAndConnect.weeklyPrice.small
+    },
+    {
+      name: "#IQPunchOutDeploymentCost",
+      value: PlusAndConnect.price.small
+    },
+    {
+      name: "#IQPunchOutAnnualService",
+      value: PlusAndConnect.annualPrice.small
+    },
+    {
+      name: "#IQPunchOutDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQPunchOutimplemetationCost",
+      value: PlusAndConnect.implementationCost
+    },
+    {
+      name: "#IQPunchOut_WeeklyDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQPunchOut_WeeklyImplementationCost",
+      value: PlusAndConnect.implementationCost
+    }
+  ]);
 }
 
-function IQPunchOutMedium(){
+function IQPunchOutMedium() {
   $("#rowIQPunchOut")
-  .children()
-  .empty();
-$("#rowIQPunchOut_Weekly")
-  .children()
-  .empty();
-appDataAd([
-  {
-    name: "#IQPunchOut",
-    value: PlusAndConnect.IQPunchOut
-  },
-  {
-    name: "#IQPunchOut_Weekly",
-    value: PlusAndConnect.IQPunchOut
-  },
-  {
-    name: "#IQPunchOutPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.upfront
-  },
-  {
-    name: "#IQPunchOut_WeeklyPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.weekly
-  },
-  {
-    name: "#IQPunchOut_WeeklySubs",
-    value: PlusAndConnect.weeklyPrice.medium
-  },
-  {
-    name: "#IQPunchOutDeploymentCost",
-    value: PlusAndConnect.price.medium
-  },
-  {
-    name: "#IQPunchOutAnnualService",
-    value: PlusAndConnect.annualPrice.medium
-  },
-  {
-    name: "#IQPunchOutDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQPunchOutimplemetationCost",
-    value: PlusAndConnect.implementationCost
-  },
-  {
-    name: "#IQPunchOut_WeeklyDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQPunchOut_WeeklyImplementationCost",
-    value: PlusAndConnect.implementationCost
-  }
-]);
+    .children()
+    .empty();
+  $("#rowIQPunchOut_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQPunchOut",
+      value: PlusAndConnect.IQPunchOut
+    },
+    {
+      name: "#IQPunchOut_Weekly",
+      value: PlusAndConnect.IQPunchOut
+    },
+    {
+      name: "#IQPunchOutPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.upfront
+    },
+    {
+      name: "#IQPunchOut_WeeklyPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.weekly
+    },
+    {
+      name: "#IQPunchOut_WeeklySubs",
+      value: PlusAndConnect.weeklyPrice.medium
+    },
+    {
+      name: "#IQPunchOutDeploymentCost",
+      value: PlusAndConnect.price.medium
+    },
+    {
+      name: "#IQPunchOutAnnualService",
+      value: PlusAndConnect.annualPrice.medium
+    },
+    {
+      name: "#IQPunchOutDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQPunchOutimplemetationCost",
+      value: PlusAndConnect.implementationCost
+    },
+    {
+      name: "#IQPunchOut_WeeklyDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQPunchOut_WeeklyImplementationCost",
+      value: PlusAndConnect.implementationCost
+    }
+  ]);
 }
 
-function IQPunchOutLarge(){
+function IQPunchOutLarge() {
   $("#rowIQPunchOut")
-  .children()
-  .empty();
-$("#rowIQPunchOut_Weekly")
-  .children()
-  .empty();
-appDataAd([
-  {
-    name: "#IQPunchOut",
-    value: PlusAndConnect.IQPunchOut
-  },
-  {
-    name: "#IQPunchOut_Weekly",
-    value: PlusAndConnect.IQPunchOut
-  },
-  {
-    name: "#IQPunchOutPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.upfront
-  },
-  {
-    name: "#IQPunchOut_WeeklyPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.weekly
-  },
-  {
-    name: "#IQPunchOut_WeeklySubs",
-    value: PlusAndConnect.weeklyPrice.large
-  },
-  {
-    name: "#IQPunchOutDeploymentCost",
-    value: PlusAndConnect.price.large
-  },
-  {
-    name: "#IQPunchOutAnnualService",
-    value: PlusAndConnect.annualPrice.large
-  },
-  {
-    name: "#IQPunchOutDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQPunchOutimplemetationCost",
-    value: PlusAndConnect.implementationCost
-  },
-  {
-    name: "#IQPunchOut_WeeklyDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQPunchOut_WeeklyImplementationCost",
-    value: PlusAndConnect.implementationCost
-  }
-]);
+    .children()
+    .empty();
+  $("#rowIQPunchOut_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQPunchOut",
+      value: PlusAndConnect.IQPunchOut
+    },
+    {
+      name: "#IQPunchOut_Weekly",
+      value: PlusAndConnect.IQPunchOut
+    },
+    {
+      name: "#IQPunchOutPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.upfront
+    },
+    {
+      name: "#IQPunchOut_WeeklyPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.weekly
+    },
+    {
+      name: "#IQPunchOut_WeeklySubs",
+      value: PlusAndConnect.weeklyPrice.large
+    },
+    {
+      name: "#IQPunchOutDeploymentCost",
+      value: PlusAndConnect.price.large
+    },
+    {
+      name: "#IQPunchOutAnnualService",
+      value: PlusAndConnect.annualPrice.large
+    },
+    {
+      name: "#IQPunchOutDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQPunchOutimplemetationCost",
+      value: PlusAndConnect.implementationCost
+    },
+    {
+      name: "#IQPunchOut_WeeklyDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQPunchOut_WeeklyImplementationCost",
+      value: PlusAndConnect.implementationCost
+    }
+  ]);
 }
 
-function IQPunchOutExtraLarge(){
+function IQPunchOutExtraLarge() {
   $("#rowIQPunchOut")
-  .children()
-  .empty();
-$("#rowIQPunchOut_Weekly")
-  .children()
-  .empty();
-appDataAd([
-  {
-    name: "#IQPunchOut",
-    value: PlusAndConnect.IQPunchOut
-  },
-  {
-    name: "#IQPunchOut_Weekly",
-    value: PlusAndConnect.IQPunchOut
-  },
-  {
-    name: "#IQPunchOutPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.upfront
-  },
-  {
-    name: "#IQPunchOut_WeeklyPurchaseMethod",
-    value: PlusAndConnect.purchaseMethod.weekly
-  },
-  {
-    name: "#IQPunchOut_WeeklySubs",
-    value: PlusAndConnect.weeklyPrice.ExtraLarge
-  },
-  {
-    name: "#IQPunchOutDeploymentCost",
-    value: PlusAndConnect.price.ExtraLarge
-  },
-  {
-    name: "#IQPunchOutAnnualService",
-    value: PlusAndConnect.annualPrice.ExtraLarge
-  },
-  {
-    name: "#IQPunchOutDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQPunchOutimplemetationCost",
-    value: PlusAndConnect.implementationCost
-  },
-  {
-    name: "#IQPunchOut_WeeklyDaysSupport",
-    value: PlusAndConnect.implementationTime
-  },
-  {
-    name: "#IQPunchOut_WeeklyImplementationCost",
-    value: PlusAndConnect.implementationCost
-  }
-]);
+    .children()
+    .empty();
+  $("#rowIQPunchOut_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQPunchOut",
+      value: PlusAndConnect.IQPunchOut
+    },
+    {
+      name: "#IQPunchOut_Weekly",
+      value: PlusAndConnect.IQPunchOut
+    },
+    {
+      name: "#IQPunchOutPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.upfront
+    },
+    {
+      name: "#IQPunchOut_WeeklyPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.weekly
+    },
+    {
+      name: "#IQPunchOut_WeeklySubs",
+      value: PlusAndConnect.weeklyPrice.ExtraLarge
+    },
+    {
+      name: "#IQPunchOutDeploymentCost",
+      value: PlusAndConnect.price.ExtraLarge
+    },
+    {
+      name: "#IQPunchOutAnnualService",
+      value: PlusAndConnect.annualPrice.ExtraLarge
+    },
+    {
+      name: "#IQPunchOutDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQPunchOutimplemetationCost",
+      value: PlusAndConnect.implementationCost
+    },
+    {
+      name: "#IQPunchOut_WeeklyDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQPunchOut_WeeklyImplementationCost",
+      value: PlusAndConnect.implementationCost
+    }
+  ]);
 }
 
 function IQLinkSelectorSmall() {
