@@ -230,6 +230,9 @@ $(document).ready(function() {
     const iqPunchOut = $("#iqPunchOutSelector")
       .children("option:selected")
       .val();
+    const iqSmartSite = $('#iqSmartSiteSelector')
+      .children("option:selected")
+      .val();
 
     if (selectedModule == "Small") {
       appData(smallCore);
@@ -363,6 +366,10 @@ $(document).ready(function() {
     if(selectedModule == "Extra Large" && iqPunchOut == 'Yes') {
       IQPunchOutExtraLarge();
     }
+    if(selectedModule =="Small" && iqSmartSite =='Yes') {
+      IQSmartSiteSmall();
+      console.log("halala");
+    }
 
   });
 });
@@ -399,6 +406,62 @@ function appDataAd(data) {
   data.forEach(obj => {
     $("<p>" + obj.value + "</p>").appendTo(obj.name);
   });
+}
+
+function IQSmartSiteSmall(){
+  console.log('smartsite');
+  $("#rowIQSmartSite")
+  .children()
+  .empty();
+$("#rowIQSmartSite_Weekly")
+  .children()
+  .empty();
+appDataAd([
+  {
+    name: "#IQSmartSite",
+    value: PlusAndConnect.IQSmartSite
+  },
+  {
+    name: "#IQSmartSite_Weekly",
+    value: PlusAndConnect.IQSmartSite
+  },
+  {
+    name: "#IQSmartSitePurchaseMethod",
+    value: PlusAndConnect.purchaseMethod.upfront
+  },
+  {
+    name: "#IQSmartSite_WeeklyPurchaseMethod",
+    value: PlusAndConnect.purchaseMethod.weekly
+  },
+  {
+    name: "#IQSmartSite_WeeklySubs",
+    value: PlusAndConnect.weeklyPrice.small
+  },
+  {
+    name: "#IQSmartSiteDeploymentCost",
+    value: PlusAndConnect.price.small
+  },
+  {
+    name: "#IQSmartSiteAnnualService",
+    value: PlusAndConnect.annualPrice.small
+  },
+  {
+    name: "#IQSmartSiteDaysSupport",
+    value: PlusAndConnect.implementationTime
+  },
+  {
+    name: "#IQSmartSiteimplemetationCost",
+    value: PlusAndConnect.implementationCost
+  },
+  {
+    name: "#IQSmartSite_WeeklyDaysSupport",
+    value: PlusAndConnect.implementationTime
+  },
+  {
+    name: "#IQSmartSite_WeeklyImplementationCost",
+    value: PlusAndConnect.implementationCost
+  }
+]);
 }
 
 function IQPunchOutSmall(){
