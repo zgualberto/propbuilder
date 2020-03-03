@@ -888,11 +888,11 @@ function IQBoxMedium() {
   appDataAd([
     {
       name: "#IQBox",
-      value: twoDaysPlusAndConnect.IQIntegrate
+      value: twoDaysPlusAndConnect.IQBox
     },
     {
       name: "#IQBox_Weekly",
-      value: twoDaysPlusAndConnect.IQIntegrate
+      value: twoDaysPlusAndConnect.IQBox
     },
     {
       name: "#IQBoxPurchaseMethod",
@@ -943,11 +943,11 @@ function IQBoxLarge() {
   appDataAd([
     {
       name: "#IQBox",
-      value: twoDaysPlusAndConnect.IQIntegrate
+      value: twoDaysPlusAndConnect.IQBox
     },
     {
       name: "#IQBox_Weekly",
-      value: twoDaysPlusAndConnect.IQIntegrate
+      value: twoDaysPlusAndConnect.IQBox
     },
     {
       name: "#IQBoxPurchaseMethod",
@@ -998,11 +998,11 @@ function IQBoxExtraLarge() {
   appDataAd([
     {
       name: "#IQBox",
-      value: twoDaysPlusAndConnect.IQIntegrate
+      value: twoDaysPlusAndConnect.IQBox
     },
     {
       name: "#IQBox_Weekly",
-      value: twoDaysPlusAndConnect.IQIntegrate
+      value: twoDaysPlusAndConnect.IQBox
     },
     {
       name: "#IQBoxPurchaseMethod",
