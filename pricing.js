@@ -1838,15 +1838,15 @@ function IQChiliLarge() {
     },
     {
       name: "#IQChili_WeeklySubs",
-      value: PlusAndConnect.weeklyPrice.lerge
+      value: PlusAndConnect.weeklyPrice.large
     },
     {
       name: "#IQChiliDeploymentCost",
-      value: PlusAndConnect.price.lerge
+      value: PlusAndConnect.price.large
     },
     {
       name: "#IQChiliAnnualService",
-      value: PlusAndConnect.annualPrice.lerge
+      value: PlusAndConnect.annualPrice.large
     },
     {
       name: "#IQChiliDaysSupport",
