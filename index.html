@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>Proposal Builder</title>
+</head>
+<body>
+    <div class="container">
+        <p>Print IQ Proposal Generator</p>
+        <form class="form-inline">
+            <div class="row">
+                <div class="col">
+                <label>IQ Core Module : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm core-module__annual">
+                        <!-- <option value="start up">Start Up</option> -->
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Extra Large">Extra Large</option>
+                    </select>
+                </div>
+                <label>IQ Approve : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm" id="iqApproveSelector">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+                <label>IQ Store+ : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm" id="iqStore">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>IQ Site : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm core-module__annual">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+                <label>IQ Satellite : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm core-module__annual">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+                <label>IQ Factory : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm core-module__annual">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>IQ API Integrate : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm" id="iqIntegrateSelector">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                    <label>IQ API Link : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm" id="iqLinkSelector">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                    <label>IQ Punch Out : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm core-module__annual">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>IQ Smart Site : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm core-module__annual">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                      </select>
+                </div>
+                <label>IQ Enfocus Switch : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm" id="iqEnfocusSelector">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                      </select>
+                </div>
+                <label>IQ Automate Esko : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm" id="iqEskoSelector">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                      </select>
+                </div>
+            </div>
+        </div>
+        
+       <div class="row">
+           <div class="col">
+            <label>IQ Freeflow Core : </label>
+            <div class="input-group mb-2 mr-sm-2 ml-3">
+                <select class="custom-select custom-select-sm" id="iqFreeflowSelector">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Weekly">Weekly</option>  
+                  </select>
+            </div>
+            <label>IQ HP Box : </label>
+            <div class="input-group mb-2 mr-sm-2 ml-3">
+                <select class="custom-select custom-select-sm" id="iqBoxSelector">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Weekly">Weekly</option>  
+                  </select>
+            </div>
+            <label>IQ Pre Press : </label>
+            <div class="input-group mb-2 mr-sm-2 ml-3">
+                <select class="custom-select custom-select-sm core-module__annual">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Weekly">Weekly</option>  
+                  </select>
+            </div>
+           </div>
+       </div>
+
+       <div class="row">
+        <div class="col">
+            <label>IQ Chili Publish : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm" id="iqChiliSelector">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+                <label>IQ XMPIe : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm core-module__annual">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+            <label>IQ Analytics : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm core-module__annual">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label>IQ Automated Shipping : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm core-module__annual">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                    <label>IQ Capacity Planner : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm core-module__annual">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                <label>IQ Data Capture : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm core-module__annual">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label>IQ Gang : </label>
+                        <div class="input-group mb-2 mr-sm-2 ml-3">
+                            <select class="custom-select custom-select-sm core-module__annual">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Weekly">Weekly</option>  
+                            </select>
+                        </div>
+                        <label>IQ Campaigns : </label>
+                        <div class="input-group mb-2 mr-sm-2 ml-3">
+                            <select class="custom-select custom-select-sm core-module__annual">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Weekly">Weekly</option>  
+                            </select>
+                        </div>
+                        <label>IQ Infigo : </label>
+                        <div class="input-group mb-2 mr-sm-2 ml-3">
+                            <select class="custom-select custom-select-sm" id="iqInfigoSelector">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Weekly">Weekly</option>  
+                            </select>
+                        </div>
+                    </div>
+                </div>
+        </form>
+
+
+    <h3 class="mt-5 mb-5">Annual Table Pricing</h3>
+    <div style="max-width: 960px;">
+          <div class="table-responsive-sm">
+            <table class="table"  style="width:100%" id="annualRows">
+                <tr>
+                    <td>Module Listing</td>
+                    <td>Purchased Method</td>
+                    <td>Deployment Cost</td>
+                    <td>Annual Service</td>
+                    <td>Implementation Cost</td>
+                    <td>Days Included</td>
+
+                </tr>
+                <tr id="rowIqcore">
+                    <td id="iqCore"></td>
+                    <td id="iqCorePurchaseMethod"></td>
+                    <td id="iqCoreDeploymentCost"></td>
+                    <td id="iqCoreAnnualService"></td>
+                    <td id="iqCoreimplementationCost"></td>
+                    <td id="iqCoreDaysSupport"></td>
+                </tr>
+                <tr id="rowIqApprove">
+                    <td id="iqApprove"></td>
+                    <td id="iqApprovePurchaseMethod"></td>
+                    <td id="iqApproveDeploymentCost"></td>
+                    <td id="iqApproveAnnualService"></td>
+                    <td id="iqApproveimplemetationCost"></td>
+                    <td id="iqApproveDaysSupport"></td>
+                </tr>
+                <tr id="rowIQChili">
+                    <td id="IQChili"></td>
+                    <td id="IQChiliPurchaseMethod"></td>
+                    <td id="IQChiliDeploymentCost"></td>
+                    <td id="IQChiliAnnualService"></td>
+                    <td id="IQChiliimplemetationCost"></td>
+                    <td id="IQChiliDaysSupport"></td>
+                </tr>
+                <tr id="rowIQEnfocus">
+                    <td id="IQEnfocus"></td>
+                    <td id="IQEnfocusPurchaseMethod"></td>
+                    <td id="IQEnfocusDeploymentCost"></td>
+                    <td id="IQEnfocusAnnualService"></td>
+                    <td id="IQEnfocusimplemetationCost"></td>
+                    <td id="IQEnfocusDaysSupport"></td>
+                </tr>
+                <tr id="rowIQEsko">
+                    <td id="IQEsko"></td>
+                    <td id="IQEskoPurchaseMethod"></td>
+                    <td id="IQEskoDeploymentCost"></td>
+                    <td id="IQEskoAnnualService"></td>
+                    <td id="IQEskoimplemetationCost"></td>
+                    <td id="IQEskoDaysSupport"></td>
+                </tr>
+                <tr id="rowIQFreeflow">
+                    <td id="IQFreeflow"></td>
+                    <td id="IQFreeflowPurchaseMethod"></td>
+                    <td id="IQFreeflowDeploymentCost"></td>
+                    <td id="IQFreeflowAnnualService"></td>
+                    <td id="IQFreeflowimplemetationCost"></td>
+                    <td id="IQFreeflowDaysSupport"></td>
+                </tr>
+                <tr id="rowIQBox">
+                    <td id="IQBox"></td>
+                    <td id="IQBoxPurchaseMethod"></td>
+                    <td id="IQBoxDeploymentCost"></td>
+                    <td id="IQBoxAnnualService"></td>
+                    <td id="IQBoximplemetationCost"></td>
+                    <td id="IQBoxDaysSupport"></td>
+                </tr>
+
+                <tr id="rowIQInfigo">
+                    <td id="IQInfigo"></td>
+                    <td id="IQInfigoPurchaseMethod"></td>
+                    <td id="IQInfigoDeploymentCost"></td>
+                    <td id="IQInfigoAnnualService"></td>
+                    <td id="IQInfigoimplemetationCost"></td>
+                    <td id="IQInfigoDaysSupport"></td>
+                </tr>
+
+                <tr id="rowIQIntegrate">
+                    <td id="IQIntegrate"></td>
+                    <td id="IQIntegratePurchaseMethod"></td>
+                    <td id="IQIntegrateDeploymentCost"></td>
+                    <td id="IQIntegrateAnnualService"></td>
+                    <td id="IQIntegrateimplemetationCost"></td>
+                    <td id="IQIntegrateDaysSupport"></td>
+                </tr>
+
+                
+                <tr id="rowIQLink">
+                    <td id="IQLink"></td>
+                    <td id="IQLinkPurchaseMethod"></td>
+                    <td id="IQLinkDeploymentCost"></td>
+                    <td id="IQLinkAnnualService"></td>
+                    <td id="IQLinkimplemetationCost"></td>
+                    <td id="IQLinkDaysSupport"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="5">Installation Core Module</td>
+                    <td>17</td>
+
+                </tr>
+                <tr id="rowiqTotal">
+                    <td id="iqTotalaa">Total</td>
+                    <td id="iqTotalPurchaseMethod"></td>
+                    <td id="iqTotalDeploymentCost"></td>
+                    <td id="iqTotalAnnualService"></td>
+                    <td id="iqTotalimplemetationCost"></td>
+                    <td id="iqTotalDaysSupport"></td>
+                </tr>
+            </table>
+          </div>
+
+            <h3 class="mt-5 mb-5">Weekly Table Pricing</h3>
+            <div class="table-responsive-sm table">
+              <table class="table"  style="width:100%" id="WeeklyRows">
+                  <tr>
+                      <td>Module Listing</td>
+                      <td>Purchased Method</td>
+                      <td>Weekly Subscribtion</td>
+                      <td>Implementation Cost</td>
+                      <td>Days Included</td>
+                  </tr>
+                  <tr id="rowIqcore_Weekly">
+                      <td id="iqCore_Weekly"></td>
+                      <td id="iqCore_WeeklyPurchaseMethod"></td>
+                      <td id="iqCore_WeeklySubs"></td>
+                      <td id="iqCore_WeeklyImplementationCost"></td>
+                      <td id="iqCore_WeeklyDaysSupport"></td>
+                  </tr>
+                  <tr id="rowIqApprove_Weekly">
+                      <td id="iqApprove_Weekly"></td>
+                      <td id="iqApprove_WeeklyPurchaseMethod"></td>
+                      <td id="iqApprove_WeeklySubs"></td>
+                      <td id="iqApprove_WeeklyImplementationCost"></td>
+                      <td id="iqApprove_WeeklyDaysSupport"></td>
+                  </tr>
+                  <tr id="rowIQChili_Weekly">
+                    <td id="IQChili_Weekly"></td>
+                    <td id="IQChili_WeeklyPurchaseMethod"></td>
+                    <td id="IQChili_WeeklySubs"></td>
+                    <td id="IQChili_WeeklyImplementationCost"></td>
+                    <td id="IQChili_WeeklyDaysSupport"></td>
+                </tr>
+                <tr id="rowIQEnfocus_Weekly">
+                    <td id="IQEnfocus_Weekly"></td>
+                    <td id="IQEnfocus_WeeklyPurchaseMethod"></td>
+                    <td id="IQEnfocus_WeeklySubs"></td>
+                    <td id="IQEnfocus_WeeklyImplementationCost"></td>
+                    <td id="IQEnfocus_WeeklyDaysSupport"></td>
+                </tr>
+                <tr id="rowIQEsko_Weekly">
+                    <td id="IQEsko_Weekly"></td>
+                    <td id="IQEsko_WeeklyPurchaseMethod"></td>
+                    <td id="IQEsko_WeeklySubs"></td>
+                    <td id="IQEsko_WeeklyImplementationCost"></td>
+                    <td id="IQEsko_WeeklyDaysSupport"></td>
+                </tr>
+                <tr id="rowIQFreeflow_Weekly">
+                    <td id="IQFreeflow_Weekly"></td>
+                    <td id="IQFreeflow_WeeklyPurchaseMethod"></td>
+                    <td id="IQFreeflow_WeeklySubs"></td>
+                    <td id="IQFreeflow_WeeklyImplementationCost"></td>
+                    <td id="IQFreeflow_WeeklyDaysSupport"></td>
+                </tr>
+        
+                <tr id="rowIQBox_Weekly">
+                    <td id="IQBox_Weekly"></td>
+                    <td id="IQBox_WeeklyPurchaseMethod"></td>
+                    <td id="IQBox_WeeklySubs"></td>
+                    <td id="IQBox_WeeklyImplementationCost"></td>
+                    <td id="IQBox_WeeklyDaysSupport"></td>
+                </tr>
+                <tr id="rowIQInfigo_Weekly">
+                    <td id="IQInfigo_Weekly"></td>
+                    <td id="IQInfigo_WeeklyPurchaseMethod"></td>
+                    <td id="IQInfigo_WeeklySubs"></td>
+                    <td id="IQInfigo_WeeklyImplementationCost"></td>
+                    <td id="IQInfigo_WeeklyDaysSupport"></td>
+                </tr>
+                
+                <tr id="rowIQIntegrate_Weekly">
+                    <td id="IQIntegrate_Weekly"></td>
+                    <td id="IQIntegrate_WeeklyPurchaseMethod"></td>
+                    <td id="IQIntegrate_WeeklySubs"></td>
+                    <td id="IQIntegrate_WeeklyImplementationCost"></td>
+                    <td id="IQIntegrate_WeeklyDaysSupport"></td>
+                </tr>
+
+                <tr id="rowIQLink_Weekly">
+                    <td id="IQLink_Weekly"></td>
+                    <td id="IQLink_WeeklyPurchaseMethod"></td>
+                    <td id="IQLink_WeeklySubs"></td>
+                    <td id="IQLink_WeeklyImplementationCost"></td>
+                    <td id="IQLink_WeeklyDaysSupport"></td>
+                </tr>
+  
+                  <tr id="rowiqTotal_Weekly">
+                      <td id="iqTotal">Total</td>
+                      <td id="iqTotal_WeeklyPurchaseMethod"></td>
+                      <td id="iqTotal_WeeklySubs"></td>
+                      <td id="iqTotal_WeeklyImplementationCost"></td>
+                      <td id="iqTotal_WeeklyDaysSupport"></td>
+                  </tr>
+                  
+              </table>
+
+
+
+            <input type="button" id="btnHide" Value=" Hide Empty Rows " />
+            <input type="button" id="btnReset" Value=" Reset " />
+        </div>
+    </div>
+
+          
+    </div>
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script src="pricing.js"></script>
+</body>
+
+
+<!-- Optional JavaScript -->
+
+</html>

@@ -1,0 +1,173 @@
+const smallCore = {
+    "name" : "Core Software - Small for 25 Staff",
+    "SoftwareCost": 65000,
+    "purchaseMethod": "Upfront",
+    "weeklySubs": 280,
+    "SoftwareAnnual": 7500,
+    "implementationTime": 4,
+    "implementationCost": 22500,
+    "weekly":"weekly"
+}
+
+const mediumCore = {
+    "name" : "Core Software - Medium for 50 Staff",
+    "SoftwareCost": 82500,
+    "purchaseMethod": "Upfront",
+    "weeklySubs": 465,
+    "SoftwareAnnual": 12000,
+    "implementationTime": 4,
+    "implementationCost": 22500,
+    "WeeklyCost": 465,
+    "weekly":"weekly"
+}
+
+const largeCore = {
+    "name" : "Core Software - Large for 75 Staff",
+    "SoftwareCost": 112500,
+    "purchaseMethod": "Upfront",
+    "weeklySubs": 680,
+    "SoftwareAnnual": 18000,
+    "implementationTime": 4,
+    "implementationCost": 22500,
+    "weekly":"weekly"
+}
+
+const extralargeCore = {
+    "name" : "Core Software - Extra Large for 100 Staff",
+    "SoftwareCost": 137500,
+    "purchaseMethod": "Upfront",
+    "weeklySubs": 890,
+    "SoftwareAnnual": 23000,
+    "implementationTime": 4,
+    "implementationCost": 22500,
+    "weekly":"weekly"
+}
+
+const PlusAndConnect = {
+    "IQapprove" : "IQ Approve",
+    "IQChili": "IQ Chili Publish",
+    "IQFreeflow": "IQ Freeflow Core",   
+    "Infigo": "IQ Infigo",
+    "IQIntegrate": "IQ Integrate",
+    "IQLink": "IQ Link",
+    "Prinergy": "IQ Prinergy",
+    "PunchOut": "IQ Punch Out",
+    "SmartSite": "IQ Smart Site",
+    "price": {
+        "small": 5000,
+        "medium": 6000,
+        "large": 7500,
+        "extraLarge": 10000,
+    },
+    "annualPrice": {
+        "small": 750,
+        "medium": 900,
+        "large": 1125,
+        "extraLarge": 1500,
+    },
+    "weeklyPrice": {
+        "small": 40,
+        "medium": 50,
+        "large": 60,
+        "extraLarge": 80,
+    },
+    "purchaseMethod": {
+        "upfront": "upfront",
+        "weekly": "weekly",
+    },
+    "implementationTime": 1,
+    "implementationCost": 1320
+}
+
+const twoDaysPlusAndConnect = {
+    "IQEnfocus": "IQ Enfocus",
+    "IQEsko": "IQ Esko",
+    "IQBox": "IQ Hp Box",
+    "price": {
+        "small": 5000,
+        "medium": 6000,
+        "large": 7500,
+        "extraLarge": 10000,
+    },
+    "annualPrice": {
+        "small": 750,
+        "medium": 900,
+        "large": 1125,
+        "extraLarge": 1500,
+    },
+    "weeklyPrice": {
+        "small": 40,
+        "medium": 50,
+        "large": 60,
+        "extraLarge": 80,
+    },
+    "purchaseMethod": {
+        "upfront": "upfront",
+        "weekly": "weekly",
+    },
+    "implementationTime": 2,
+    "implementationCost": 2640
+}
+
+const satelliteSite = {
+    "name": "IQ Satellite",
+    "price": 11750,
+    "annualPrice": 3550,
+    "weeklyPrice": 140,
+    "purchaseMethod": {
+        "upfront": "upfront",
+        "weekly": "weekly",
+    },
+    "implementationTime": 4,
+    "implementationCost": 5280
+}
+
+// IQ Sites use this data as well
+const factorySite = {
+    "name": "IQ Sites",
+    "price": 8875,
+    "annualPrice": 1775,
+    "weeklyPrice": 70,
+    "purchaseMethod": {
+        "upfront": "upfront",
+        "weekly": "weekly",
+    },
+    "implementationTime": 2,
+    "implementationCost": 2640
+}
+
+const CarePackage = {
+    "CarePackageType": {
+        "8": {
+            "name": "8 hours",
+            "price": 1200
+        },
+        "20": {
+            "name":"20 hours",
+            "price": 2800
+        },
+        "40": {
+            "name": "40 hours",
+            "price": 5200
+        },
+    },
+}
+
+const siteSupport = {
+    "siteSupportType": {
+        "offsite": {
+            "hourlyRate": 165,
+        },
+        "onSite": {
+            "dayCharge": 1720
+        }
+    }
+}
+
+const SelfHosting = {
+    "HostingType": {
+        "name": "Self Hosting",
+        "ImplementationCost": 5280,
+        "AnnualPrice": 2640
+    }
+}

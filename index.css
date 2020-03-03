@@ -1,0 +1,29 @@
+.table {
+    word-wrap: break-word;
+}
+
+
+table.CSSTable {
+    border-width: 1px;
+    border-spacing: 0px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    background-color: white;
+    }
+    table.CSSTable th {
+        border-width: 1px;
+        padding: 0px;
+        border-style: solid;
+        border-color: black;
+        background-color: white;
+        -moz-border-radius: ;
+    }
+    table.CSSTable td {
+        border-width: 1px;
+        padding: 0px;
+        border-style: solid;
+        border-color: black;
+        background-color: white;
+        -moz-border-radius: ;
+    }

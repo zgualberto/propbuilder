@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>Proposal Builder</title>
+</head>
+<body>
+    <div class="container">
+        <p>Print IQ Proposal Generator</p>
+        <form class="form-inline">
+            <div class="row">
+                <div class="col">
+                <label>IQ Core Module : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm">
+                        <option value="start up">Start Up</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Extra Large">Extra Large</option>
+                    </select>
+                </div>
+                <label>IQ Approve : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+                <label>IQ Store+ : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>IQ Site : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+                <label>IQ Satellite : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+                <label>IQ Factory : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>IQ API Integrate : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm ">
+                            <option value="yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                    <label>IQ API Link : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm ">
+                            <option value="yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                    <label>IQ Punch Out : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm ">
+                            <option value="yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>IQ Smart Site : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                      </select>
+                </div>
+                <label>IQ Enfocus Switch : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                      </select>
+                </div>
+                <label>IQ Automate Esko : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                      </select>
+                </div>
+            </div>
+        </div>
+        
+       <div class="row">
+           <div class="col">
+            <label>IQ Freeflow Core : </label>
+            <div class="input-group mb-2 mr-sm-2 ml-3">
+                <select class="custom-select custom-select-sm ">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Weekly">Weekly</option>  
+                  </select>
+            </div>
+            <label>IQ HP Box : </label>
+            <div class="input-group mb-2 mr-sm-2 ml-3">
+                <select class="custom-select custom-select-sm ">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Weekly">Weekly</option>  
+                  </select>
+            </div>
+            <label>IQ Pre Press : </label>
+            <div class="input-group mb-2 mr-sm-2 ml-3">
+                <select class="custom-select custom-select-sm ">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Weekly">Weekly</option>  
+                  </select>
+            </div>
+           </div>
+       </div>
+
+       <div class="row">
+        <div class="col">
+            <label>IQ Chili Publish : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+                <label>IQ XMPIe : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+            <label>IQ Analytics : </label>
+                <div class="input-group mb-2 mr-sm-2 ml-3">
+                    <select class="custom-select custom-select-sm ">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Weekly">Weekly</option>  
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label>IQ Automated Shipping : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm ">
+                            <option value="yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                    <label>IQ Capacity Planner : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm ">
+                            <option value="yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                <label>IQ Data Capture : </label>
+                    <div class="input-group mb-2 mr-sm-2 ml-3">
+                        <select class="custom-select custom-select-sm ">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Weekly">Weekly</option>  
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label>IQ Gang : </label>
+                        <div class="input-group mb-2 mr-sm-2 ml-3">
+                            <select class="custom-select custom-select-sm">
+                                <option value="yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Weekly">Weekly</option>  
+                            </select>
+                        </div>
+                        <label>IQ Campaigns : </label>
+                        <div class="input-group mb-2 mr-sm-2 ml-3">
+                            <select class="custom-select custom-select-sm">
+                                <option value="yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Weekly">Weekly</option>  
+                            </select>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        
+          <div class="table-responsive-sm">
+            <table class="table"  style="width:100%" id="annualRows">
+                <tr>
+                    <td>Module Listing</td>
+                    <td>Purchased Method</td>
+                    <td>Weekly Subs</td>
+                    <td>Deployment Cost</td>
+                    <td>Annual Service</td>
+                    <td>Days Included</td>
+                </tr>
+                <tr>
+                    <td id="iqCore">{{Text taken from Core Moudle}}</td>
+                    <td id="iqCorePurchaseMethod">{{Payment Method == to upfront because, Weekly will say its subscribtion}}</td>
+                    <td id="iqCoreWeeklySubs">{{Fixed Price}}{{Annual will cause weekly to be N/A Vise versa}}</td>
+                    <td id="iqCoreDeploymentCost">{{Fixed Price}} Weekly will cause this Deployment to be N/A</td>
+                    <td id="iqCoreAnnualService">{{Fixed Price}} Weekly will cause this Deployment to be N/A</td>
+                    <td id="iqCoreDaysSupport">{{Fixed Value based on variable}}</td>
+                </tr>
+                <tr>
+                    <td id="iqApprove">{{Text taken from Core Moudle}}</td>
+                    <td id="iqApprovePurchaseMethod">{{Payment Method == to upfront because, Weekly will say its subscribtion}}</td>
+                    <td id="iqApproveWeeklySubs">{{Fixed Price}}{{Annual will cause weekly to be N/A Vise versa}}</td>
+                    <td id="iqApproveDeploymentCost">{{Fixed Price}} Weekly will cause this Deployment to be N/A</td>
+                    <td id="iqApproveAnnualService">{{Fixed Price}} Weekly will cause this Deployment to be N/A</td>
+                    <td id="iqApproveDaysSupport">{{Fixed Value based on variable}}</td>
+                </tr>
+                <tr>
+                    <td id="iqApprove">{{Text taken from Core Moudle}}</td>
+                    <td id="iqApprovePurchaseMethod">{{Payment Method == to upfront because, Weekly will say its subscribtion}}</td>
+                    <td id="iqApproveWeeklySubs">{{Fixed Price}}{{Annual will cause weekly to be N/A Vise versa}}</td>
+                    <td id="iqApproveDeploymentCost">{{Fixed Price}} Weekly will cause this Deployment to be N/A</td>
+                    <td id="iqApproveAnnualService">{{Fixed Price}} Weekly will cause this Deployment to be N/A</td>
+                    <td id="iqApproveDaysSupport">{{Fixed Value based on variable}}</td>
+                </tr>
+            </table>
+            <input type="button" id="btnHide" Value=" Hide Empty Rows " />
+            <input type="button" id="btnReset" Value=" Reset " />
+        </div>
+
+
+          
+    </div>
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script src="pricing.js"></script>
+</body>
+
+
+<!-- Optional JavaScript -->
+
+</html>
