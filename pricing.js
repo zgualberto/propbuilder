@@ -51,18 +51,17 @@ const PlusAndConnect = {
   IQEnfocus: "IQ Enfocus",
   IQEsko: "IQ Esko",
   IQFreeflow: "IQ Freeflow Core",
-  IQBox: "IQ Hp Box",
   Infigo: "IQ Infigo",
   IQIntegrate: "IQ Integrate",
   IQLink: "IQ Link",
   Prinergy: "IQ Prinergy",
   IQPunchOut: "IQ Punch Out",
-  SmartSite: "IQ Smart Site",
+  IQSmartSite: "IQ Smart Site",
   price: {
-    small: 5000,
-    medium: 6000,
-    large: 7500,
-    extraLarge: 10000
+    "small": 6320,
+    "medium": 7320,
+    "large": 8820,
+    "extraLarge": 13200,
   },
   annualPrice: {
     small: 750,
@@ -89,10 +88,10 @@ const twoDaysPlusAndConnect = {
   IQEsko: "IQ Esko",
   IQBox: "IQ Hp Box",
   price: {
-    small: 5000,
-    medium: 6000,
-    large: 7500,
-    extraLarge: 10000
+    "small": 7640,
+    "medium": 8640,
+    "large": 10140,
+    "extraLarge": 12640,
   },
   annualPrice: {
     small: 750,
@@ -233,7 +232,12 @@ $(document).ready(function() {
     const iqSmartSite = $("#iqSmartSiteSelector")
       .children("option:selected")
       .val();
+    const iqXMPIe = $("#iqXmpieSelector")
+      .children("option:selected")
+      .val();
 
+      // Problem Core missing when other option selected.
+      // Need to check
     if (selectedModule == "Small") {
       appData(smallCore);
     } else if (selectedModule == "Medium") {
@@ -290,7 +294,15 @@ $(document).ready(function() {
       IQEnfocusLarge();
     } else if (selectedModule == "Extra Large" && iqEnfocus == "Yes") {
       IQEnfocusExtraLarge();
-    }
+    } else if (iqEnfocus == "No") {
+      $("#rowIQEnfocus")
+      .children()
+      .empty();
+    $("#rowIQEnfocus_Weekly")
+      .children()
+      .empty();
+  }
+
 
     // IQ Esko
 
@@ -303,6 +315,14 @@ $(document).ready(function() {
     } else if (selectedModule == "Extra Large" && iqEsko == "Yes") {
       IQEskoExtraLarge();
     }
+      else if (iqEsko == "No") {
+      $('#rowIQEsko')
+      .children()
+      .empty();
+      $('#rowIQEsko_Weekly')
+      .children()
+      .empty();
+    }
 
     // IQ Freeflow Core
     if (selectedModule == "Small" && iqFreeflow == "Yes") {
@@ -313,6 +333,13 @@ $(document).ready(function() {
       IQFreeflowLarge();
     } else if (selectedModule == "Extra Large" && iqFreeflow == "Yes") {
       IQFreeflowExtraLarge();
+    } else if (iqFreeflow =='No') {
+      $('#rowIQFreeflow')
+      .children()
+      .empty();
+      $('#rowIQFreeflow_Weekly')
+      .children()
+      .empty()
     }
 
     if (selectedModule == "Small" && iqBox == "Yes") {
@@ -323,6 +350,13 @@ $(document).ready(function() {
       IQBoxLarge();
     } else if (selectedModule == "Extra Large" && iqBox == "Yes") {
       IQBoxExtraLarge();
+    } else if (iqBox == 'No') {
+      $('#rowIQBox')
+      .children()
+      .empty();
+      $('#rowIQBOX_Weekly')
+      .children()
+      .empty();
     }
 
     if (selectedModule == "Small" && iqIntegrate == "Yes") {
@@ -336,6 +370,14 @@ $(document).ready(function() {
     }
     if (selectedModule == "Extra Large" && iqIntegrate == "Yes") {
       IQIntegrateExtraLarge();
+    }
+    if (iqIntegrate == 'No') {
+      $('#rowIQIntegrate')
+      .children()
+      .empty();
+      $('#rowIQIntegrate_Weekly')
+      .children()
+      .empty();
     }
 
     if (selectedModule == "Small" && iqLink == "Yes") {
@@ -354,6 +396,15 @@ $(document).ready(function() {
       IQLinkSelectorExtraLarge();
     }
 
+    if(iqLink == 'No') {
+      $('#rowIQLink') 
+        .children()
+        .empty();
+      $('#rowIQLink_Weekly')
+        .children()
+        .empty();
+    }
+
     if (selectedModule == "Small" && iqPunchOut == "Yes") {
       IQPunchOutSmall();
     }
@@ -366,9 +417,34 @@ $(document).ready(function() {
     if (selectedModule == "Extra Large" && iqPunchOut == "Yes") {
       IQPunchOutExtraLarge();
     }
+    if (iqPunchOut == 'No') {
+      $('#rowIQPunchOut')
+        .children()
+        .empty();
+      $('#rowIQPunchOut_Weekly')
+        .children()
+        .empty();
+    }
+
+
+
     if (selectedModule == "Small" && iqSmartSite == "Yes") {
       IQSmartSiteSmall();
-      console.log("halala");
+    }
+    if (selectedModule == "Medium" && iqSmartSite == "Yes") {
+      IQSmartSiteMedium();
+    }
+    if (selectedModule == "Large" && iqSmartSite == "Yes") {
+      IQSmartSiteLarge();
+    }
+    if (selectedModule == "Extra Large" && iqSmartSite == "Yes") {
+      IQSmartSiteExtraLarge();
+    }
+    
+
+
+    if (selectedModule =="Small" && iqXMPIe == "Yes") {
+      console.log("XMPIe running")
     }
 
     $("#iqTotalDeploymentCost").text(
@@ -714,6 +790,171 @@ function IQSmartSiteSmall() {
     {
       name: "#IQSmartSiteAnnualService",
       value: PlusAndConnect.annualPrice.small
+    },
+    {
+      name: "#IQSmartSiteDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQSmartSiteimplemetationCost",
+      value: PlusAndConnect.implementationCost
+    },
+    {
+      name: "#IQSmartSite_WeeklyDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQSmartSite_WeeklyImplementationCost",
+      value: PlusAndConnect.implementationCost
+    }
+  ]);
+}
+
+function IQSmartSiteMedium() {
+  $("#rowIQSmartSite")
+    .children()
+    .empty();
+  $("#rowIQSmartSite_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQSmartSite",
+      value: PlusAndConnect.IQSmartSite
+    },
+    {
+      name: "#IQSmartSite_Weekly",
+      value: PlusAndConnect.IQSmartSite
+    },
+    {
+      name: "#IQSmartSitePurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.upfront
+    },
+    {
+      name: "#IQSmartSite_WeeklyPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.weekly
+    },
+    {
+      name: "#IQSmartSite_WeeklySubs",
+      value: PlusAndConnect.weeklyPrice.medium
+    },
+    {
+      name: "#IQSmartSiteDeploymentCost",
+      value: PlusAndConnect.price.medium
+    },
+    {
+      name: "#IQSmartSiteAnnualService",
+      value: PlusAndConnect.annualPrice.medium
+    },
+    {
+      name: "#IQSmartSiteDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQSmartSiteimplemetationCost",
+      value: PlusAndConnect.implementationCost
+    },
+    {
+      name: "#IQSmartSite_WeeklyDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQSmartSite_WeeklyImplementationCost",
+      value: PlusAndConnect.implementationCost
+    }
+  ]);
+}
+
+function IQSmartSiteLarge() {
+  $("#rowIQSmartSite")
+    .children()
+    .empty();
+  $("#rowIQSmartSite_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQSmartSite",
+      value: PlusAndConnect.IQSmartSite
+    },
+    {
+      name: "#IQSmartSite_Weekly",
+      value: PlusAndConnect.IQSmartSite
+    },
+    {
+      name: "#IQSmartSitePurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.upfront
+    },
+    {
+      name: "#IQSmartSite_WeeklyPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.weekly
+    },
+    {
+      name: "#IQSmartSite_WeeklySubs",
+      value: PlusAndConnect.weeklyPrice.large
+    },
+    {
+      name: "#IQSmartSiteDeploymentCost",
+      value: PlusAndConnect.price.large
+    },
+    {
+      name: "#IQSmartSiteAnnualService",
+      value: PlusAndConnect.annualPrice.large
+    },
+    {
+      name: "#IQSmartSiteDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQSmartSiteimplemetationCost",
+      value: PlusAndConnect.implementationCost
+    },
+    {
+      name: "#IQSmartSite_WeeklyDaysSupport",
+      value: PlusAndConnect.implementationTime
+    },
+    {
+      name: "#IQSmartSite_WeeklyImplementationCost",
+      value: PlusAndConnect.implementationCost
+    }
+  ]);
+}
+
+function IQSmartSiteExtraLarge() {
+  $("#rowIQSmartSite")
+    .children()
+    .empty();
+  $("#rowIQSmartSite_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQSmartSite",
+      value: PlusAndConnect.IQSmartSite
+    },
+    {
+      name: "#IQSmartSite_Weekly",
+      value: PlusAndConnect.IQSmartSite
+    },
+    {
+      name: "#IQSmartSitePurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.upfront
+    },
+    {
+      name: "#IQSmartSite_WeeklyPurchaseMethod",
+      value: PlusAndConnect.purchaseMethod.weekly
+    },
+    {
+      name: "#IQSmartSite_WeeklySubs",
+      value: PlusAndConnect.weeklyPrice.extraLarge
+    },
+    {
+      name: "#IQSmartSiteDeploymentCost",
+      value: PlusAndConnect.price.extraLarge
+    },
+    {
+      name: "#IQSmartSiteAnnualService",
+      value: PlusAndConnect.annualPrice.extraLarge
     },
     {
       name: "#IQSmartSiteDaysSupport",

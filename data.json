@@ -54,10 +54,10 @@ const PlusAndConnect = {
     "PunchOut": "IQ Punch Out",
     "SmartSite": "IQ Smart Site",
     "price": {
-        "small": 5000,
-        "medium": 6000,
-        "large": 7500,
-        "extraLarge": 10000,
+        "small": 6320,
+        "medium": 7320,
+        "large": 8820,
+        "extraLarge": 13200,
     },
     "annualPrice": {
         "small": 750,
@@ -84,10 +84,10 @@ const twoDaysPlusAndConnect = {
     "IQEsko": "IQ Esko",
     "IQBox": "IQ Hp Box",
     "price": {
-        "small": 5000,
-        "medium": 6000,
-        "large": 7500,
-        "extraLarge": 10000,
+        "small": 7640,
+        "medium": 8640,
+        "large": 10140,
+        "extraLarge": 12640,
     },
     "annualPrice": {
         "small": 750,
@@ -111,7 +111,7 @@ const twoDaysPlusAndConnect = {
 
 const satelliteSite = {
     "name": "IQ Satellite",
-    "price": 11750,
+    "price": 17030,
     "annualPrice": 3550,
     "weeklyPrice": 140,
     "purchaseMethod": {
@@ -125,7 +125,7 @@ const satelliteSite = {
 // IQ Sites use this data as well
 const factorySite = {
     "name": "IQ Sites",
-    "price": 8875,
+    "price": 11515,
     "annualPrice": 1775,
     "weeklyPrice": 70,
     "purchaseMethod": {
