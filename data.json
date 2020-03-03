@@ -171,3 +171,77 @@ const SelfHosting = {
         "AnnualPrice": 2640
     }
 }
+
+const TakingItFurther = {
+    "moduleType": {
+        "small": {
+            "price": {
+                "upfront": 5000,
+                "annual": 1000,
+                "weekly": 45
+            }
+        },
+        "medium": {
+            "price": {
+                "upfront": 7500,
+                "annual": 1500,
+                "weekly": 65
+            }
+        },
+        "large": {
+            "price": {
+                "upfront": 10000,
+                "annual": 2000,
+                "weekly": 90
+            }
+        },
+        "Extra Large": {
+            "price": {
+                "upfront": 12500,
+                "annual": 2000,
+                "weekly": 110
+        }
+    },
+    "moduleName": {
+        "Analytics":"Analytics",
+        "Automated": "Automated Freight",
+        "CapacityPlan": "Capacity Planner",
+        "DataCapture": "Data Capture",
+        "Gang": "Gang"
+        }
+    }
+}
+
+const Campaign = {
+    "moduleType": {
+        "small": {
+            "price": {
+                "upfront": 10000,
+                "annual": 2000,
+                "weekly": 90
+            }
+        },
+        "medium": {
+            "price": {
+                "upfront": 20000,
+                "annual": 4000,
+                "weekly": 175
+            }
+        },
+        "large": {
+            "price": {
+                "upfront": 30000,
+                "annual": 6000,
+                "weekly": 260
+            }
+        },
+        "Extra Large": {
+            "price": {
+                "upfront": 40000,
+                "annual": 8000,
+                "weekly": 350
+        }
+    },
+    "moduleName": "Campaign Name"
+}
+
