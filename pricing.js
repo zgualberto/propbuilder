@@ -182,7 +182,9 @@ const SelfHosting = {
 };
 
 $(document).ready(function() {
+  // When docs running append core small to table
   console.log("jQuery Running");
+  appData(smallCore);
   $("#btnHide").click(function() {
     $("#annualRows tr td").each(function() {
       var cell = $.trim($(this).text());
@@ -202,44 +204,44 @@ $(document).ready(function() {
   // When we select Core
   $("select").change(function() {
     const selectedModule = $(".core-module__annual")
-      .children("option:selected")
-      .val();
-    const iqApprove = $("#iqApproveSelector")
-      .children("option:selected")
-      .val();
-    const iqChili = $("#iqChiliSelector")
-      .children("option:selected")
-      .val();
-    const iqEnfocus = $("#iqEnfocusSelector")
-      .children("option:selected")
-      .val();
-    const iqEsko = $("#iqEskoSelector")
-      .children("option:selected")
-      .val();
-    const iqFreeflow = $("#iqFreeflowSelector")
-      .children("option:selected")
-      .val();
-    const iqBox = $("#iqBoxSelector")
-      .children("option:selected")
-      .val();
-    const iqInfigo = $("#IQInfigoSelector")
-      .children("option:selected")
-      .val();
-    const iqIntegrate = $("#iqIntegrateSelector")
-      .children("option:selected")
-      .val();
-    const iqLink = $("#iqLinkSelector")
-      .children("option:selected")
-      .val();
-    const iqPunchOut = $("#iqPunchOutSelector")
-      .children("option:selected")
-      .val();
-    const iqSmartSite = $("#iqSmartSiteSelector")
-      .children("option:selected")
-      .val();
-    const iqXMPIe = $("#iqXmpieSelector")
-      .children("option:selected")
-      .val();
+    .children("option:selected")
+    .val();
+  const iqApprove = $("#iqApproveSelector")
+    .children("option:selected")
+    .val();
+  const iqChili = $("#iqChiliSelector")
+    .children("option:selected")
+    .val();
+  const iqEnfocus = $("#iqEnfocusSelector")
+    .children("option:selected")
+    .val();
+  const iqEsko = $("#iqEskoSelector")
+    .children("option:selected")
+    .val();
+  const iqFreeflow = $("#iqFreeflowSelector")
+    .children("option:selected")
+    .val();
+  const iqBox = $("#iqBoxSelector")
+    .children("option:selected")
+    .val();
+  const iqInfigo = $("#IQInfigoSelector")
+    .children("option:selected")
+    .val();
+  const iqIntegrate = $("#iqIntegrateSelector")
+    .children("option:selected")
+    .val();
+  const iqLink = $("#iqLinkSelector")
+    .children("option:selected")
+    .val();
+  const iqPunchOut = $("#iqPunchOutSelector")
+    .children("option:selected")
+    .val();
+  const iqSmartSite = $("#iqSmartSiteSelector")
+    .children("option:selected")
+    .val();
+  const iqXMPIe = $("#iqXmpieSelector")
+    .children("option:selected")
+    .val();
 
       // Problem Core missing when other option selected.
       // Need to check
@@ -482,277 +484,6 @@ $(document).ready(function() {
       .children()
       .empty();
     }
-
-    $("#iqTotalDeploymentCost").text(
-      parseInt(
-        $("#IQChiliDeploymentCost p").text() !== "undefined"
-          ? $("#IQChiliDeploymentCost p").text()
-          : 0
-      ) +
-        parseInt(
-          $("#IQEnfocusDeploymentCost p").text() !== "undefined"
-            ? $("#IQEnfocusDeploymentCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQEskoDeploymentCost p").text() !== "undefined"
-            ? $("#IQEskoDeploymentCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflowDeploymentCost p").text() !== "undefined"
-            ? $("#IQFreeflowDeploymentCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQBoxDeploymentCost p").text() !== "undefined"
-            ? $("#IQBoxDeploymentCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQIntegrateDeploymentCost p").text() !== "undefined"
-            ? $("#IQIntegrateDeploymentCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQLinkDeploymentCost p").text() !== "undefined"
-            ? $("#IQLinkDeploymentCost p").text()
-            : 0
-        )
-    );
-
-    $("#iqTotalAnnualService").text(
-      parseInt(
-        $("#IQChiliAnnualService p").text() !== "undefined"
-          ? $("#IQChiliAnnualService p").text()
-          : 0
-      ) +
-        parseInt(
-          $("#IQEnfocusAnnualService p").text() !== "undefined"
-            ? $("#IQEnfocusAnnualService p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQEskoAnnualService p").text() !== "undefined"
-            ? $("#IQEskoAnnualService p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflowAnnualService p").text() !== "undefined"
-            ? $("#IQFreeflowAnnualService p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQBoxAnnualService p").text() !== "undefined"
-            ? $("#IQBoxAnnualService p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQIntegrateAnnualService p").text() !== "undefined"
-            ? $("#IQIntegrateAnnualService p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQLinkAnnualService p").text() !== "undefined"
-            ? $("#IQLinkAnnualService p").text()
-            : 0
-        )
-    );
-
-    $("#iqTotalimplemetationCost").text(
-      parseInt(
-        $("#IQChiliimplemetationCost p").text() !== "undefined"
-          ? $("#IQChiliimplemetationCost p").text()
-          : 00
-      ) +
-        parseInt(
-          $("#IQEnfocusimplemetationCost p").text() !== "undefined"
-            ? $("#IQEnfocusimplemetationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQEskoimplemetationCost p").text() !== "undefined"
-            ? $("#IQEskoimplemetationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflowimplemetationCost p").text() !== "undefined"
-            ? $("#IQFreeflowimplemetationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQBoximplemetationCost p").text() !== "undefined"
-            ? $("#IQBoximplemetationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQIntegrateimplemetationCost p").text() !== "undefined"
-            ? $("#IQIntegrateimplemetationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQLinkimplemetationCost p").text() !== "undefined"
-            ? $("#IQLinkimplemetationCost p").text()
-            : 0
-        )
-    );
-
-    $("#iqTotalDaysSupport").text(
-      parseInt(
-        $("#IQChiliDaysSupport p").text() !== "undefined"
-          ? $("#IQChiliDaysSupport p").text()
-          : 0
-      ) +
-        parseInt(
-          $("#IQEnfocusDaysSupport p").text() !== "undefined"
-            ? $("#IQEnfocusDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQEskoDaysSupport p").text() !== "undefined"
-            ? $("#IQEskoDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflowDaysSupport p").text() !== "undefined"
-            ? $("#IQFreeflowDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQBoxDaysSupport p").text() !== "undefined"
-            ? $("#IQBoxDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQIntegrateDaysSupport p").text() !== "undefined"
-            ? $("#IQIntegrateDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQLinkDaysSupport p").text() !== "undefined"
-            ? $("#IQLinkDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#installationCoreModuleDaysincluded").text() !== "undefined"
-            ? $("#installationCoreModuleDaysincluded").text()
-            : 0
-        )
-    );
-
-    $("#iqTotal_WeeklySubs").text(
-      parseInt(
-        $("#IQChili_WeeklySubs p").text() !== "undefined"
-          ? $("#IQChili_WeeklySubs p").text()
-          : 0
-      ) +
-        parseInt(
-          $("#IQEnfocus_WeeklySubs p").text() !== "undefined"
-            ? $("#IQEnfocus_WeeklySubs p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflow_WeeklySubs p").text() !== "undefined"
-            ? $("#IQFreeflow_WeeklySubs p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflow_WeeklySubs p").text() !== "undefined"
-            ? $("#IQFreeflow_WeeklySubs p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQBox_WeeklySubs p").text() !== "undefined"
-            ? $("#IQBox_WeeklySubs p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQIntegrate_WeeklySubs p").text() !== "undefined"
-            ? $("#IQIntegrate_WeeklySubs p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQLink_WeeklySubs p").text() !== "undefined"
-            ? $("#IQLink_WeeklySubs p").text()
-            : 0
-        )
-    );
-
-    $("#iqTotal_WeeklyImplementationCost").text(
-      parseInt(
-        $("#IQChili_WeeklyImplementationCost p").text() !== "undefined"
-          ? $("#IQChili_WeeklyImplementationCost p").text()
-          : 0
-      ) +
-        parseInt(
-          $("#IQEnfocus_WeeklyImplementationCost p").text() !== "undefined"
-            ? $("#IQEnfocus_WeeklyImplementationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflow_WeeklyImplementationCost p").text() !== "undefined"
-            ? $("#IQFreeflow_WeeklyImplementationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflow_WeeklyImplementationCost p").text() !== "undefined"
-            ? $("#IQFreeflow_WeeklyImplementationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQBox_WeeklyImplementationCost p").text() !== "undefined"
-            ? $("#IQBox_WeeklyImplementationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQIntegrate_WeeklyImplementationCost p").text() !== "undefined"
-            ? $("#IQIntegrate_WeeklyImplementationCost p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQLink_WeeklyImplementationCost p").text() !== "undefined"
-            ? $("#IQLink_WeeklyImplementationCost p").text()
-            : 0
-        )
-    );
-
-    $("#iqTotal_WeeklyDaysSupport").text(
-      parseInt(
-        $("#IQChili_WeeklyDaysSupport p").text() !== "undefined"
-          ? $("#IQChili_WeeklyDaysSupport p").text()
-          : 0
-      ) +
-        parseInt(
-          $("#IQEnfocus_WeeklyDaysSupport p").text() !== "undefined"
-            ? $("#IQEnfocus_WeeklyDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflow_WeeklyDaysSupport p").text() !== "undefined"
-            ? $("#IQFreeflow_WeeklyDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQFreeflow_WeeklyDaysSupport p").text() !== "undefined"
-            ? $("#IQFreeflow_WeeklyDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQBox_WeeklyDaysSupport p").text() !== "undefined"
-            ? $("#IQBox_WeeklyDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQIntegrate_WeeklyDaysSupport p").text() !== "undefined"
-            ? $("#IQIntegrate_WeeklyDaysSupport p").text()
-            : 0
-        ) +
-        parseInt(
-          $("#IQLink_WeeklyDaysSupport p").text() !== "undefined"
-            ? $("#IQLink_WeeklyDaysSupport p").text()
-            : 0
-        )
-    );
   });
 });
 
@@ -763,7 +494,9 @@ function clearTables() {
   $("#rowIqcore_Weekly")
     .children()
     .empty();
+
 }
+
 
 function appData(data) {
   clearTables();
@@ -783,7 +516,6 @@ function appData(data) {
 }
 
 function appDataAd(data) {
-  clearTables();
 
   data.forEach(obj => {
     $("<p>" + obj.value + "</p>").appendTo(obj.name);
