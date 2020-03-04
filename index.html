@@ -33,9 +33,12 @@
                 </div>
                 <label>IQ Store+ : </label>
                 <div class="input-group mb-2 mr-sm-2 ml-3">
-                    <select class="custom-select custom-select-sm" id="iqStore">
+                    <select class="custom-select custom-select-sm" id="iqStoreSelector">
                         <option value="No">No</option>
-                        <option value="Yes">Yes</option>
+                        <option value="250">250 Products</option>
+                        <option value="500">500 Products</option>
+                        <option value="1000">1000 Products</option>
+                        <option value="1001">More than 1000 Products</option>
                         <!-- <option value="Weekly">Weekly</option>   -->
                     </select>
                 </div>
@@ -376,6 +379,15 @@
                     <td id="IQXMPIeDaysSupport"></td>
                 </tr>
 
+                <tr id="rowIQStore">
+                    <td id="IQStore"></td>
+                    <td id="IQStorePurchaseMethod"></td>
+                    <td id="IQStoreDeploymentCost"></td>
+                    <td id="IQStoreAnnualService"></td>
+                    <!-- <td id="IQStoreimplemetationCost"></td> -->
+                    <td id="IQStoreDaysSupport"></td>
+                </tr>
+
                 <tr>
                     <td colspan="4">Installation Core Module</td>
                     <td>17</td>
@@ -498,6 +510,13 @@
                     <td id="IQXMPIe_WeeklyImplementationCost"></td>
                     <td id="IQXMPIe_WeeklyDaysSupport"></td>
                 </tr>
+                <tr id="rowIQStore_Weekly">
+                    <td id="IQStore_Weekly"></td>
+                    <td id="IQStore_WeeklyPurchaseMethod"></td>
+                    <td id="IQStore_WeeklySubs"></td>
+                    <td id="IQStore_WeeklyImplementationCost"></td>
+                    <td id="IQStore_WeeklyDaysSupport"></td>
+                </tr>
 
 
                   <tr id="rowiqTotal_Weekly">
@@ -525,8 +544,10 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    
         <script src="./pricing.js"></script>
         <script src="./totalCalc.js"></script>
+ 
 </body>
 
 

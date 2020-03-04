@@ -158,9 +158,6 @@ const CarePackage = {
   }
 };
 
-{
-  
-}
 
 const siteSupport = {
   siteSupportType: {
@@ -180,6 +177,87 @@ const SelfHosting = {
     AnnualPrice: 2640
   }
 };
+
+const TakingItFurther = {
+  moduleType: {
+      small: {
+          price: {
+              upfront: 5000,
+              annual: 1000,
+              weekly: 45
+          }
+      },
+      medium: {
+          price: {
+              upfront: 7500,
+              annual: 1500,
+              weekly: 65
+          }
+      },
+      large: {
+          price: {
+              upfront: 10000,
+              annual: 2000,
+              weekly: 90
+          }
+      },
+      ExtraLarge: {
+          price: {
+              upfront: 12500,
+              annual: 2000,
+              weekly: 110
+           }
+      },
+  moduleName: {
+      Analytics:"Analytics",
+      Automated: "Automated Freight",
+      CapacityPlan: "Capacity Planner",
+      DataCapture: "Data Capture",
+      Gang: "Gang"
+      }
+  }
+}
+
+const IqStore = {
+  moduleType: {
+      small: {
+          price: {
+              upfront: 6320,
+              annual: 1000,
+              weekly: 45
+          },
+          name: "Up to 250 Products",
+      },
+      medium: {
+          price: {
+              upfront: 11320,
+              annual: 2000,
+              weekly: 90
+          },
+          name: "Up to 500 Products"
+      },
+      large: {
+          price: {
+              upfront: 16320,
+              annual: 3000,
+              weekly: 135
+          },
+          name : "Up to 1000 Products"
+      },
+      ExtraLarge: {
+          price: {
+              upfront: 21320,
+              annual: 4000,
+              weekly: 180
+           },
+           name: "Above 1000"
+      },
+      Weekly,
+      Upfront,
+      implementationTime: 1,
+      implementationCost: 1320
+  }
+}
 
 $(document).ready(function() {
   // When docs running append core small to table
@@ -243,6 +321,11 @@ $(document).ready(function() {
     .children("option:selected")
     .val();
 
+  // IQ Store
+    const iqStore = $("#iqStoreSelector")
+      .children("option:selected")
+      .val();
+    console.log(iqStore);
       // Problem Core missing when other option selected.
       // Need to check
     if (selectedModule == "Small") {
@@ -253,6 +336,16 @@ $(document).ready(function() {
       appData(largeCore);
     } else if (selectedModule == "Extra Large") {
       appData(extralargeCore);
+    }
+
+    // IQ Store
+    if (iqStore == '250') {
+      iqStoreSmall();
+      console.log("store small running")
+    }
+
+    if (iqStore == '500') {
+      iqStoreMedium()
     }
 
     // IQ Approve
@@ -514,7 +607,6 @@ function appData(data) {
     "#iqCore_WeeklyImplementationCost"
   );
 }
-
 function appDataAd(data) {
 
   data.forEach(obj => {
@@ -2938,6 +3030,61 @@ function iqApproveExtraLarge() {
     {
       name: "#iqApprove_WeeklyImplementationCost",
       value: PlusAndConnect.implementationCost
+    }
+  ]);
+}
+
+function IQStoreSmall() {
+  $("#rowIQStore")
+    .children()
+    .empty();
+  $("#rowIQStore_Weekly")
+    .children()
+    .empty();
+  appDataAd([
+    {
+      name: "#IQStore",
+      value: IqStore.moduleType.small.name
+    },
+    {
+      name: "#IQStore_Weekly",
+      value:  IqStore.moduleType.small.name
+    },
+    {
+      name: "#IQStorePurchaseMethod",
+      value: IqStore.moduleType.Upfront
+    },
+    {
+      name: "#IQStore_WeeklyPurchaseMethod",
+      value: IqStore.moduleType.Weekly
+    },
+    {
+      name: "#IQStore_WeeklySubs",
+      value: IqStore.moduleType.small.weekly
+    },
+    {
+      name: "#IQStoreDeploymentCost",
+      value: IqStore.moduleType.upfront
+    },
+    {
+      name: "#IQStoreAnnualService",
+      value: IqStore.moduleType.annual
+    },
+    {
+      name: "#IQStoreDaysSupport",
+      value: IqStore.moduleType.implementationTime
+    },
+    {
+      name: "#IQStoreimplemetationCost",
+      value: IqStore.moduleType.implementationCost
+    },
+    {
+      name: "#IQStore_WeeklyDaysSupport",
+      value: IqStore.moduleType.implementationTime
+    },
+    {
+      name: "#IQStore_WeeklyImplementationCost",
+      value: IqStore.moduleType.implementationCost
     }
   ]);
 }
